@@ -89,6 +89,7 @@ public class ThreadPooledServer implements Runnable {
 	 * Stops this server
 	 */
 	public synchronized void stop() {
+		log.info("Stopping server!");
 		isStopped = true;
 		try {
 			serverSocket.close();

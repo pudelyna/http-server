@@ -1,6 +1,5 @@
 package com.http.server.constants;
 
-import java.io.File;
 
 /**
  * Class holding application constants.

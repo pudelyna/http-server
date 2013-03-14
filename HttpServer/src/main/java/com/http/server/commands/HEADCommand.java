@@ -47,6 +47,7 @@ public class HEADCommand extends CommandParser implements HTTPCommand {
 				requestURI = requestURI.substring(1);
 
 				//Construct static resource path using the downloads directory
+				requestURI = requestURI.replace("/", File.separator);
 				String staticResourceName = Constants.WEB_ROOT_DIR + File.separator + Constants.DEFAULT_DOWNLOAD_DIR
 						+ File.separator + requestURI;
 				log.debug("Static resource requested: " + staticResourceName);

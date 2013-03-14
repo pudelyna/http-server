@@ -1,18 +1,15 @@
 package com.http.server.handlers;
 
-import java.io.BufferedInputStream;
 import java.io.DataOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.io.InputStream;
-import java.net.URL;
 import java.util.Date;
 
 import org.apache.log4j.Logger;
 
-import com.http.server.constants.FileContentType;
 import com.http.server.constants.Constants;
+import com.http.server.constants.FileContentType;
 import com.http.server.constants.HTTPStatusCode;
 
 /**

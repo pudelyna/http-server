@@ -73,6 +73,7 @@ public class CommandParser {
 			entityBody = requestBody.substring(1);
 		}else{
 			entityBody = requestBody;
+			return;
 		}
 		String pairs[] = entityBody.split("[&]");
 		for (String pair : pairs) {

@@ -5,6 +5,7 @@ import java.io.File;
 import java.io.IOException;
 import java.net.MalformedURLException;
 
+import com.http.server.Application;
 import com.http.server.constants.Constants;
 import com.http.server.constants.HTTPStatusCode;
 import com.http.server.handlers.ResponseHandler;
@@ -38,7 +39,10 @@ public class GETCommand extends CommandParser implements HTTPCommand {
 				//Default server page was requested
 				log.debug("Display default server page");
 				writer.handleResponse(Constants.HTML_START + Constants.DEFAULT_PAGE_CONTENT + Constants.HTML_END, false, true);
-			} else {
+			} if(requestURI.endsWith(Constants.SHUTDOWN_COMMAND)){
+				//The SHUTDOWN command was called from the browser
+				Application.terminateApplicationController();
+			}else {
 				//Another static resource was requested
 				parseParameters(requestURI);
 				log.debug("GET parameters number:" + parameters.size());
@@ -54,6 +58,7 @@ public class GETCommand extends CommandParser implements HTTPCommand {
 				requestURI = requestURI.substring(1);
 
 				//Construct static resource path using the downloads directory
+				requestURI = requestURI.replace("/", File.separator);
 				String staticResourcePath = Constants.WEB_ROOT_DIR + File.separator + Constants.DEFAULT_DOWNLOAD_DIR
 						+ File.separator + requestURI;
 				log.debug("Static resource requested: " + staticResourcePath);

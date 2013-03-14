@@ -64,8 +64,6 @@ public class RequestThread implements Runnable {
 
 			log.debug("Request processed!");
 		} catch (IOException e) {
-			System.out.println("aaa");
-			e.printStackTrace();
 			log.error(e.getMessage());
 		}
 	}

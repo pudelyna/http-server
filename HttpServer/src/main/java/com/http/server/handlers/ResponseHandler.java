@@ -13,7 +13,7 @@ import com.http.server.constants.FileContentType;
 import com.http.server.constants.HTTPStatusCode;
 
 /**
- * Class used response handling.
+ * Class used for response handling.
  * 
  * @author AndreeaSandru
  */

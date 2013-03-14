@@ -6,6 +6,11 @@ import org.apache.log4j.Logger;
 
 import com.http.server.constants.Constants;
 
+/**
+* Application controller class. Starts the server thread and stops it.
+*
+* @author AndreeaSandru
+*/
 public class ApplicationController implements Runnable {
 	
 	/** log4j logger for current class */

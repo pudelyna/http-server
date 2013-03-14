@@ -6,10 +6,10 @@ import org.apache.log4j.Logger;
 
 import com.http.server.constants.Constants;
 
-public class Application implements Runnable {
+public class ApplicationController implements Runnable {
 	
 	/** log4j logger for current class */
-	private static final Logger log = Logger.getLogger(Application.class);
+	private static final Logger log = Logger.getLogger(ApplicationController.class);
 
 	/** HTTP Server instance*/
 	private static ThreadPooledServer server;
@@ -37,7 +37,7 @@ public class Application implements Runnable {
 			//Initialize the server with the provided port number
 			server = new ThreadPooledServer(Integer.parseInt(args[1]));
 			//Start the application controller thread
-			new Thread(new Application()).start();
+			new Thread(new ApplicationController()).start();
 		}
 	}
 	

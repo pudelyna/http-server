@@ -5,7 +5,7 @@ import java.io.File;
 import java.io.IOException;
 import java.net.MalformedURLException;
 
-import com.http.server.Application;
+import com.http.server.ApplicationController;
 import com.http.server.constants.Constants;
 import com.http.server.constants.HTTPStatusCode;
 import com.http.server.handlers.ResponseHandler;
@@ -41,7 +41,7 @@ public class GETCommand extends CommandParser implements HTTPCommand {
 				writer.handleResponse(Constants.HTML_START + Constants.DEFAULT_PAGE_CONTENT + Constants.HTML_END, false, true);
 			} if(requestURI.endsWith(Constants.SHUTDOWN_COMMAND)){
 				//The SHUTDOWN command was called from the browser
-				Application.terminateApplicationController();
+				ApplicationController.terminateApplicationController();
 			}else {
 				//Another static resource was requested
 				parseParameters(requestURI);

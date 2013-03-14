@@ -44,6 +44,7 @@ public class Constants {
 	public static final String SHUTDOWN_COMMAND = "SHUTDOWN";
 	public static final String STARTUP_COMMAND = "START";
 
+	/** -- SERVER THREAD POOL PARAMETERS -- */
 	public static final int POOL_SIZE = 5;
 	public static final int MAX_POOL_SIZE = 10;
 	public static final long KEEP_ALIVE_TIME = 10;

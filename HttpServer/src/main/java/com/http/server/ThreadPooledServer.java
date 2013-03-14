@@ -77,7 +77,7 @@ public class ThreadPooledServer implements Runnable {
 	}
 
 	/**
-	 * Verifies id server is stopped or not
+	 * Verifies if server is stopped or not
 	 * 
 	 * @return true if server is stopped, false otherwise
 	 */

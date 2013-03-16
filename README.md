@@ -21,7 +21,7 @@ In order to start the server there is a start.bat/.sh script that runs the jar o
 
 Implementation
 -------------------------  
-For implementing this HTTP server application I used JSE6 and log4j 1.2.17 in order to implement the logging functinality.
+For implementing this HTTP server application I used JSE6 and log4j 1.2.17 in order to implement the logging functionality.
 
 
 

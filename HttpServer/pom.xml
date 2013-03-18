@@ -65,7 +65,7 @@
 					</descriptorRefs>
 					<archive>
 						<manifest>
-							<mainClass>com.http.server.Application</mainClass>
+							<mainClass>com.http.server.ApplicationController</mainClass>
 						</manifest>
 					</archive>
 				</configuration>

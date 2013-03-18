@@ -28,6 +28,10 @@ It also supports parameter parsing for supported HTTP methods.
 When accessing the *http://machineName:port/* the console page of the server will be displayed. In order to stop the server just sending a GET command like *http://machineName:port/SHUTDOWN* is enough.  
 The base class used for the HTTP server implemetation are the *Socket* class that represents the "client" socket and the *ServerSocket* class that waits for a connection request from a client. The last mentioned class, once it receives a connection request, it creates the Socket instance to handle the communication with the client.  
 The implementation also uses a thread pool implemented on top of the *java.util.concurrent.ThreadPoolExecutor*.  
+
+An architectural overview is presented in the next figure:
+
+![](/img/architecture.jpg "Architectural overview")
   
 The main *design patterns* in this applications are:  
 1. *Abstract factory* (creational design pattern) used to provide an interface for creating families of HTTP command objects without specifying their concrete classes.(eg. HTTPCommandFactory and implementations)  

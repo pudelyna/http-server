@@ -6,7 +6,7 @@ File Based HTTP Server Application
 *Source code*: https://github.com/pudelyna/http-server  
 *Version*: 1.0  
 *System requirements*: JRE6/JDK6 or later, Apache Maven 2  
-*Tested with*: Apache JMeter 2.9  
+*Tested with*: JUnit, Apache JMeter 2.9  
   
 Description
 -------------------------

@@ -63,7 +63,7 @@ Other
 
 Versions of software the application uses:  
 -jUnit 4.11  
--loj4j 1.2.17  
+-log4j 1.2.17  
   
 The license is public domain. 
 

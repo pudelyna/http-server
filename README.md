@@ -21,7 +21,7 @@ In order to start the server there is a start.bat/.sh script that runs the jar o
   
 Implementation
 -------------------------  
-For implementing this HTTP server application I used JSE6 and log4j 1.2.17 in order to implement the logging functionality.  
+For implementing this HTTP server application I used JSE6 and log4j 1.2.17 in order to implement the logging functionality. The log file called HTTPServerLog.log will be stored in the working directory.  
 The entry point of this application (the static main method) is the *ApplicationController* class. It creates the instance of *ThreadPooledServer* and waits for the shutdown command in order to stop the server. The wait mechanism is implemented using the 
 *java.util.concurrent.CountDownLatch*. The server waits for HTTP requests on a designated port (the seccond cmd line argument when running the jar), processes them and sends responses back to the clients. The application only sends and uploads static resources from and to specified directories (*downloads* and *uploads*) located in the root folder of the application (where the jar is located).
 It also supports parameter parsing for supported HTTP methods.  
@@ -52,6 +52,8 @@ Installation
         *start.bat* for Windows or *start.sh* for other operarting system 
 8. 	To stop the application send a GET command using http://machineName:port/SHUTDOWN  
 9.	Enjoy!  
+  
+*Note: The working directory is HttpServer.*
   	  
 Known issues
 -------------------------

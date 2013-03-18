@@ -35,7 +35,7 @@ The main *design patterns* in this applications are:
 3. *Singleton* used to restrict the instantiation of a class to one object per application. (eg. FileContentType)  
   
 The build of the application is done using Apache Maven 2.  
-The application testing is done using unit tests (JUnit) for request processing and parsing and using JMeter of integration testing.  
+The application testing is done using unit tests (JUnit) for request processing and parsing and using JMeter of integration testing. In order to test with JMeter there are available downloads and uploads directories and for testing the upload of a file the path to the file must be changed in the JMeter project.  
   
 Installation 
 -------------------------   

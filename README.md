@@ -63,6 +63,7 @@ Known issues
 -------------------------
 
 1. Usupported HTTP methods:  OPTIONS, PUT, DELETE, TRACE  
+2. Improved request parameters processing
   
 Other
 -------------------------

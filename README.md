@@ -15,8 +15,7 @@ This is a Java SE6 application that implements a file based thread pooled HTTP 1
 The GET method brings to the client a static resource found in the downloads directory. If the requested resource is a directory, then the client will receive the listing of the directory contents. The HEAD method checks the availability of a static resource returning same response headers as GET, but with no message body.
 The POST method allows the upload of a resource (uploads will be stored in downloads directory). For all the supported HTTP methods, the server parses the parameters if any and logs them in the server log file.
 For POST method, the server supports both "multipart/form-data" and "application/x-www-form-urlencoded" content types.  
-As mentioned above, the application is a multithreaded server based on a thread pool that stores the idle incomming requests in order to be processed at a later time.  
-The configuration of the thread pool is a size of 5 threads and a maximum size of 10 threads. So these settings limit the number of concurent requests to be processed.  
+As mentioned above, the application is a multithreaded server based on a thread pool that stores the idle incomming requests in order to be processed at a later time. The configuration of the thread pool is a size of 5 threads and a maximum size of 10 threads. So these settings limit the number of concurent requests to be processed.  
 In order to start the server there is a start.bat/.sh script that runs the jar of the application and in order to stop it, a GET method with /SHUTDOWN URI needs to be sent to the server.  
   
 Implementation

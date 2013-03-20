@@ -39,10 +39,14 @@ public class ApplicationController implements Runnable {
 				return;
 			}
 			log.info("Start the server!");
-			//Initialize the server with the provided port number
-			server = new ThreadPooledServer(Integer.parseInt(args[1]));
-			//Start the application controller thread
-			new Thread(new ApplicationController()).start();
+			try{
+				//Initialize the server with the provided port number
+				server = new ThreadPooledServer(Integer.parseInt(args[1]));
+				//Start the application controller thread
+				new Thread(new ApplicationController()).start();
+			}catch (NumberFormatException nfe) {
+				log.error("Provided port is not a number");
+			}
 		}
 	}
 	
